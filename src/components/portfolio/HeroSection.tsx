@@ -57,9 +57,9 @@ const HeroSection = () => {
                 
                 {/* FINAL FIXED IMAGE TAG */}
                 <img
-                  src={`${import.meta.env.BASE_URL}profile.png`}
-                  alt="Ankit Sharma"
-                  className="w-full h-full object-cover"
+                    src="profile.png"
+                    alt="Ankit Sharma"
+                    className="w-full h-full object-cover"
                 />
 
 
