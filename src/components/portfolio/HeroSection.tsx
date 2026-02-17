@@ -1,4 +1,3 @@
-import profile from "@/assets/profile.png";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, FileText } from "lucide-react";
 
@@ -58,10 +57,11 @@ const HeroSection = () => {
                 
                 {/* FINAL FIXED IMAGE TAG */}
                 <img
-                  src={profile}
-                  alt="Ankit Sharma Profile"
+                  src={`${import.meta.env.BASE_URL}profile.png`}
+                  alt="Ankit Sharma"
                   className="w-full h-full object-cover"
                 />
+
 
               </div>
             </div>
