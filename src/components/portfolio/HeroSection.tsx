@@ -1,3 +1,4 @@
+import profile from "@/assets/profile.png";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, FileText } from "lucide-react";
 
@@ -42,7 +43,7 @@ const HeroSection = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-2xl">
               <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-muted flex items-center justify-center overflow-hidden">
                 <img
-                  src="/Portfolio-Website/profile.png"
+                 src={profile} alt="Profile"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   onError={(e) => {
