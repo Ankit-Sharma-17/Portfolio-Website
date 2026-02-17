@@ -19,7 +19,7 @@ const HeroSection = () => {
           <div className="flex-1 text-center md:text-left animate-fade-in-up">
             <p className="text-primary font-medium mb-2 font-display">Hello, I'm</p>
             <h1 className="text-5xl md:text-7xl font-bold font-display mb-4 text-foreground">
-              John <span className="text-gradient">Doe</span>
+              Ankit <span className="text-gradient">Sharma</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-2 font-display">
               Full Stack Developer
@@ -40,8 +40,15 @@ const HeroSection = () => {
           {/* Profile image placeholder */}
           <div className="flex-shrink-0 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-2xl">
-              <div className="w-60 h-60 md:w-76 md:h-76 rounded-full bg-muted flex items-center justify-center text-6xl">
-                👨‍💻
+              <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-muted flex items-center justify-center overflow-hidden">
+                <img
+                  src="/profile-white.jpeg"
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "/placeholder.svg";
+                  }}
+                />
               </div>
             </div>
           </div>

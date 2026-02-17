@@ -16,7 +16,7 @@ const EventFooter = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2"><Mail size={14} /> summit@xyzuniversity.edu</div>
               <div className="flex items-center gap-2"><Phone size={14} /> +1 (555) 987-6543</div>
-              <div className="flex items-center gap-2"><MapPin size={14} /> XYZ University, Main Campus</div>
+              <div className="flex items-center gap-2"><MapPin size={14} /> University, Main Campus</div>
             </div>
           </div>
           <div>

@@ -14,11 +14,27 @@ const navLinks = [
 const EventNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string>("#about-event");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // observe sections to highlight active nav link
+    const sections = navLinks.map((l) => document.querySelector(l.href)).filter(Boolean) as Element[];
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { root: null, rootMargin: "-40% 0px -40% 0px", threshold: 0.01 }
+    );
+    sections.forEach((s) => obs.observe(s));
+    return () => obs.disconnect();
   }, []);
 
   const handleClick = (href: string) => {
@@ -34,7 +50,10 @@ const EventNav = () => {
         </a>
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <button key={link.href} onClick={() => handleClick(link.href)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <button
+              key={link.href}
+              onClick={() => handleClick(link.href)}
+              className={`text-sm font-medium transition-colors ${active === link.href ? "text-primary underline decoration-2 underline-offset-4" : "text-muted-foreground hover:text-primary"}`}>
               {link.label}
             </button>
           ))}
