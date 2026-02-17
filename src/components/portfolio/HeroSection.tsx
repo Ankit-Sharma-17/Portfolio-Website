@@ -57,9 +57,9 @@ const HeroSection = () => {
                 
                 {/* FINAL FIXED IMAGE TAG */}
                 <img
-                    src="/Portfolio-Website/profile.png"
-  alt="Ankit Sharma"
-  className="w-full h-full object-cover"
+                  src="/Portfolio-Website/profile.png"
+                  alt="Ankit Sharma"
+                 className="w-full h-full object-cover"
                 />
 
 
