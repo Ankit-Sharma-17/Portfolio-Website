@@ -42,7 +42,7 @@ const HeroSection = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-2xl">
               <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-muted flex items-center justify-center overflow-hidden">
                 <img
-                  src="/profile-white.jpeg"
+                  src="./profile-white.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   onError={(e) => {
