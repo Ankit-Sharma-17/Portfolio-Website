@@ -58,7 +58,7 @@ const HeroSection = () => {
                 {/* --- FIX START --- */}
                 {/* We join the BASE_URL (from vite config) with the filename */}
                 <img
-                  src={`${import.meta.env.BASE_URL}profile.png`}
+                  src={`${import.meta.env.BASE_URL}profile-white.jpeg`}
                   alt="Ankit Sharma"
                   className="w-full h-full object-cover"
                 />
