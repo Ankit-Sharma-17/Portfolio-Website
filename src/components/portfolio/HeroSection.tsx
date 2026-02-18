@@ -55,13 +55,14 @@ const HeroSection = () => {
               
               <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-muted flex items-center justify-center overflow-hidden">
                 
-                {/* FINAL FIXED IMAGE TAG */}
+                {/* --- FIX START --- */}
+                {/* We join the BASE_URL (from vite config) with the filename */}
                 <img
-                  src="/Portfolio-Website/profile.png"
+                  src={`${import.meta.env.BASE_URL}profile.png`}
                   alt="Ankit Sharma"
-                 className="w-full h-full object-cover"
+                  className="w-full h-full object-cover"
                 />
-
+                {/* --- FIX END --- */}
 
               </div>
             </div>
